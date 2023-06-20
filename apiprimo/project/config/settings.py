@@ -16,7 +16,7 @@ from smart_getenv import getenv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+default_app_config = 'apps.pools.apps.PoolsConfig'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -38,6 +38,7 @@ FORCE_SCRIPT_NAME = os.getenv('PROXY_SCRIPT_NAME', None)
 # Application definition
 
 INSTALLED_APPS = [
+    default_app_config,
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_yasg',
     'rest_framework',
+
 ]
 
 MIDDLEWARE = [
@@ -120,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = []
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'pt-BR'
+LANGUAGE_CODE = 'es-ES'
 
 TIME_ZONE = os.getenv('TIME_ZONE', 'UTC')
 
