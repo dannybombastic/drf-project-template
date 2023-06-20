@@ -7,12 +7,10 @@
   "python.linting.enabled": true,
   "python.linting.lintOnSave": true,
   "python.linting.pylintEnabled": true,
-  "python.linting.pylintArgs": [
-    "--load-plugins",
-    "pylint_django"
-  ],
-  "python.formatting.provider": "black",
-  "python.formatting.blackArgs": [
-    "--skip-string-normalization"
-  ]
+  "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
+  "python.formatting.provider": "none",
+  "python.formatting.blackArgs": ["--skip-string-normalization"],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  }
 }
